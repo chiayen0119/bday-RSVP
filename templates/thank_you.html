@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='thank_you.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- 放置 friends.jpg 图片 -->
+        <div class="thank-you-image">
+            <img src="{{ url_for('static', filename='images/friends.jpg') }}" alt="Friends Image">
+        </div>
+
+        <!-- 显示感谢信息 -->
+        <h1>感谢您的回复！</h1>
+        <p>非常感谢您的参与，期待在活动中见到您。</p>
+        <a href="{{ url_for('index') }}" class="button">返回首页</a>
+    </div>
+</body>
+</html>

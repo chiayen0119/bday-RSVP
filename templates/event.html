@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ event.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='event.css') }}">
+</head>
+<body>
+    <div class="event-container">
+        <img src="{{ url_for('static', filename='images/party_image.jpg') }}" alt="Party Image">
+        <h1>{{ event.title }}</h1>
+        <p>{{ event.details }}</p>
+        <p>Date: {{ event.date }}</p>
+        <p>Time: {{ event.time }}</p>
+        <p>Location: {{ event.location }}</p>
+        <a class="button" href="{{ url_for('rsvp', event_id=event.id) }}">RSVP</a>
+    </div>
+</body>
+</html>

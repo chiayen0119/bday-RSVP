@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSVP for Birthday Party</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="dietary_restrictions">过敏或饮食限制：</label>
+            <input type="text" id="dietary_restrictions" name="dietary_restrictions"><br>
+            <label for="message">想说的话：</label>
+            <textarea id="message" name="message"></textarea><br>
+
+            <!-- 隐藏字段来传递之前的数据 -->
+            <input type="hidden" name="part1" value="{{ request.args.get('part1') }}">
+            <input type="hidden" name="part2" value="{{ request.args.get('part2') }}">
+            <input type="hidden" name="part3" value="{{ request.args.get('part3') }}">
+            <input type="hidden" name="afterparty_idea" value="{{ request.args.get('afterparty_idea') }}">
+
+            <button type="submit">RSVP</button>
+        </form>
+    </div>
+</body>
+</html>

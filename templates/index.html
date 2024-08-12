@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cecilia's B-Day Party</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <!-- 独立的标题部分 -->
+    <h1 class="main-title">Cecilia's B-Day Party</h1>
+
+    <!-- 邀请文字图片 -->
+    <div class="invitation-image">
+        <img src="{{ url_for('static', filename='images/invite_text.jpg') }}" alt="If you are reading this you are invited to my birthday">
+    </div>
+
+    <!-- "My Dearest Friends..." 信息模块 -->
+    <div class="invite-message-container">
+        <div class="invite-message">
+            <p>My Dearest Friends,</p>
+            <p>You are warmly invited to my birthday party in Shanghai, China, this August (Yes! I’m back!).</p>
+            <p>Knowing many of you may have work commitments, I’ve chosen Sunday, August 25th, for our celebration ;)</p>
+            <p>Please RSVP with your preferred activities by August 19th 💡.</p>
+            <p>🎂</p>
+            <p>⭐️About the Birthday Party⭐️</p>
+            <p>The tentative plan has two parts. You can join EITHER part or BOTH. Please select which part(s) you can attend!</p>
+
+            <!-- RSVP 表单 -->
+            <form id="rsvpForm" action="{{ url_for('rsvp', event_id=2) }}" method="GET">
+                <!-- Part 1 -->
+                <p><strong>Part 1️⃣:</strong> Immerse yourself in Chinese tea culture and enjoy the air conditioning at a teahouse (北茶馆-上海养云安缦酒店) from 1:30 pm to 4:30 pm.
+                <span class="radio-group-inline">
+                    <label><input type="radio" name="part1" value="I'm Going" required> <span class="emoji">👍</span> 我会去</label>
+                    <label><input type="radio" name="part1" value="Can't Go" required> <span class="emoji">😢</span> 无法出席</label>
+                </span>
+                </p>
+
+                <!-- Part 2 -->
+                <p><strong>Part 2️⃣:</strong> We’ll head to the dinner venue (福1015-愚园路店) for a Shanghainese dinner, group photos, and more from 6 pm to 8 pm.
+                <span class="radio-group-inline">
+                    <label><input type="radio" name="part2" value="I'm Going" required> <span class="emoji">👍</span> 我会去</label>
+                    <label><input type="radio" name="part2" value="Can't Go" required> <span class="emoji">😢</span> 无法出席</label>
+                </span>
+                </p>
+
+                <!-- Part 3 -->
+                <p><strong>Part 3️⃣❓:</strong> Most likely, we’ll wrap up after dinner so everyone can rest up for Monday! 😄 But, if you’re up for an after-party (KTV, bars, etc.), let me know! Hehe 😜
+                <span class="radio-group-inline">
+                    <label><input type="radio" name="part3" value="I'm Going" required> <span class="emoji">👍</span> 我会去</label>
+                    <label><input type="radio" name="part3" value="Can't Go" required> <span class="emoji">😢</span> 无法出席</label>
+                </span>
+                </p>
+
+                <!-- After Party Idea -->
+                <p>
+                    <label for="afterparty_idea" id="afterparty_label">如果想有After party，想玩啥？</label>
+                    <input type="text" id="afterparty_idea" name="afterparty_idea">
+                </p>
+            </form>
+
+            <p>🀄️</p>
+            <p>P.S. This year, the party’s theme is 新中式 (New Chinese Style)! The dress code is white or green 😘.</p>
+            <p>P.P.S. For birthday gifts, I’d like to try something different this year. Instead of material gifts, I’d love to receive a short memo from you—whether electronically or by hand—about your first impression of me, our friendship, and the moments we’ve shared that made us laugh!</p>
+            <p>But, if you really, really, really want to bring something:</p>
+            <ol>
+                <li>The letter I mentioned above!</li>
+                <li>Save your money for our future hangouts!</li>
+                <li>DM me and chat! 😈</li>
+            </ol>
+            <p style="margin-bottom: 5px;">Best,<br>Cecilia</p>
+        </div>
+    </div>
+
+    <!-- 独立的 RSVP 按钮模块，减少与上方的间距 -->
+    <div class="rsvp-button-container">
+        <button type="submit" form="rsvpForm">RSVP</button>
+    </div>
+
+    <div style="height: 20px;"></div>
+</body>
+</html>
