@@ -78,20 +78,25 @@ body {
 
 .rsvp-button-container {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px; /* 增加按钮与页面底部的距离 */
+    margin-top: 80px;  /* 进一步增加顶部空白 */
+    margin-bottom: 100px;  /* 进一步增加底部空白 */
 }
 
 .rsvp-button-container button {
-    padding: 10px 20px;
+    padding: 25px 50px;  /* 增大按钮的内边距 */
     background-color: #1e90ff;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 2em;  /* 增大字体 */
     cursor: pointer;
+    width: 35%;  /* 增大宽度到占屏幕宽度的35% */
+    min-width: 250px;  /* 进一步增大最小宽度 */
+    max-width: 45%;  /* 最大宽度设为屏幕宽度的45% */
 }
 
 .rsvp-button-container button:hover {
     background-color: #4682b4;
 }
+
+
