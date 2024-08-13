@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica', '微软雅黑'; /* 更改为指定的字体 */
+    font-family: 'Helvetica', '微软雅黑';
     background-image: url('images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,11 +14,11 @@ body {
 }
 
 .form-container {
-    background-color: rgba(255, 255, 255, 0.9); /* 保持背景颜色，稍微透明 */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* 保持原本大小 */
+    max-width: 600px;
     width: 100%;
     text-align: left;
 }
@@ -26,13 +26,13 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2.5em; /* 放大标题字体 */
-    font-family: 'Helvetica', '微软雅黑'; /* 指定字体 */
+    font-size: 2.8rem; /* 放大标题字体 */
+    font-family: 'Helvetica', '微软雅黑';
 }
 
 label {
     font-weight: bold;
-    font-size: 1.3em; /* 放大标签字体 */
+    font-size: 1.6rem; /* 放大标签字体 */
 }
 
 input[type="text"],
@@ -43,14 +43,14 @@ textarea {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1.2em; /* 增加输入框的字体大小 */
+    font-size: 1.5rem; /* 增加输入框的字体大小 */
 }
 
 .radio-group {
     display: flex;
     justify-content: space-around;
     margin-bottom: 15px;
-    font-size: 1.2em; /* 增加选项组的字体大小 */
+    font-size: 1.5rem; /* 增加选项组的字体大小 */
 }
 
 .radio-group label {
@@ -70,9 +70,23 @@ button[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2em; /* 调整按钮字体大小 */
+    font-size: 1.5rem; /* 调整按钮字体大小 */
 }
 
 button[type="submit"]:hover {
     background-color: #4682b4;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    label, input[type="text"], input[type="email"], textarea {
+        font-size: 1.4rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1.3rem;
+    }
 }
