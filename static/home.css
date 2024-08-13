@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica', '微软雅黑'; /* 更改为指定的字体 */
     background-image: url('images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,9 +15,10 @@ body {
 
 .main-title {
     margin-top: 50px;
-    font-size: 3em;
+    font-size: 3.5em; /* 放大标题字体 */
     color: #333;
     text-align: center;
+    font-family: 'Helvetica', '微软雅黑'; /* 指定字体 */
 }
 
 .invitation-image img {
@@ -40,10 +41,21 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     line-height: 1.8; /* 增加段落的行高 */
+    font-size: 1.5em; /* 增加段落字体大小 */
 }
 
 .invite-message p:first-child {
     margin-bottom: 20px;  /* 增加第一段和第二段之间的距离 */
+}
+
+/* 针对指定段落的字体大小调整 */
+.invite-message ol {
+    font-size: 1.4em; /* 放大列表项目的字体 */
+    margin-left: 20px; /* 确保列表的缩进正确 */
+}
+
+.invite-message ol li {
+    margin-bottom: 10px; /* 为每个列表项增加下方间距 */
 }
 
 .radio-group-inline {
@@ -76,7 +88,7 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2em; /* 调整按钮字体大小 */
     cursor: pointer;
 }
 
