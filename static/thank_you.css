@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica', '微软雅黑'; /* 更改为指定的字体 */
+    font-family: 'Helvetica', '微软雅黑';
     background-image: url('images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,35 +17,35 @@ body {
     text-align: center;
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; /* 确保容器内元素居中 */
+    justify-content: center;
     align-items: center;
 }
 
 .thank-you-image img {
-    max-width: 150%; /* 放大图片但仍保持响应式 */
+    max-width: 80%; /* 调整图片的最大宽度 */
     height: auto;
     border-radius: 10px;
+    margin: 0 auto; /* 图片居中 */
 }
 
 .container {
     text-align: center;
-    max-width: 600px;
-    width: 100%; /* 确保容器宽度 */
+    max-width: 1000px; /* 调整容器的最大宽度，使内容更宽 */
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0); /* 保持透明度 */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 }
 
 .container h1 {
     margin-top: 20px;
-    font-size: 2.5em; /* 放大标题字体 */
+    font-size: 2.8rem; /* 放大标题字体 */
     color: #333;
 }
 
 .container p {
-    font-size: 1.3em; /* 放大段落字体 */
+    font-size: 1.6rem; /* 放大段落字体 */
     margin-bottom: 20px;
 }
 
@@ -56,9 +56,27 @@ body {
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 1.2em; /* 调整按钮字体大小 */
+    font-size: 1.5rem; /* 调整按钮字体大小 */
 }
 
 .button:hover {
     background-color: #4682b4;
+}
+
+@media (max-width: 768px) {
+    .thank-you-image img {
+        max-width: 100%; /* 在小屏幕上图片保持完整宽度 */
+    }
+
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    .container p {
+        font-size: 1.4rem;
+    }
+
+    .button {
+        font-size: 1.3rem;
+    }
 }
