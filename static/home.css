@@ -52,10 +52,15 @@ body {
     margin-bottom: 20px;
 }
 
+/*.radio-group-inline {*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    margin-left: 10px;*/
+/*}*/
+
 .radio-group-inline {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 10px;
+    display: block; /* 改为块级元素，使其占据一整行 */
+    margin-top: 10px; /* 添加一个顶部的空隙，确保它与上面的文字保持一定距离 */
 }
 
 .radio-group-inline label {
