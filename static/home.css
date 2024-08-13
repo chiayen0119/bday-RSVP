@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica', '微软雅黑';
+    font-family: 'Helvetica', '微软雅黑'; /* 更新字体 */
     background-image: url('images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,10 +15,9 @@ body {
 
 .main-title {
     margin-top: 50px;
-    font-size: 3.5rem; /* 放大标题字体 */
+    font-size: 3em;
     color: #333;
     text-align: center;
-    font-family: 'Helvetica', '微软雅黑';
 }
 
 .invitation-image img {
@@ -41,20 +40,10 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     line-height: 1.8;
-    font-size: 1.6rem; /* 放大段落字体 */
 }
 
 .invite-message p:first-child {
     margin-bottom: 20px;
-}
-
-.invite-message ol {
-    font-size: 1.5rem; /* 放大列表项目的字体 */
-    margin-left: 20px;
-}
-
-.invite-message ol li {
-    margin-bottom: 10px;
 }
 
 .radio-group-inline {
@@ -79,6 +68,7 @@ body {
 .rsvp-button-container {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 50px; /* 增加按钮与页面底部的距离 */
 }
 
 .rsvp-button-container button {
@@ -87,24 +77,10 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.5rem; /* 调整按钮字体大小 */
+    font-size: 16px;
     cursor: pointer;
 }
 
 .rsvp-button-container button:hover {
     background-color: #4682b4;
-}
-
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 3rem;
-    }
-
-    .invite-message p, .invite-message ol {
-        font-size: 1.4rem;
-    }
-
-    .rsvp-button-container button {
-        font-size: 1.3rem;
-    }
 }
