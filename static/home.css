@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica', '微软雅黑'; /* 更改为指定的字体 */
+    font-family: 'Helvetica', '微软雅黑';
     background-image: url('images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,15 +10,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.6; /* 增加全局的行高 */
+    line-height: 1.6;
 }
 
 .main-title {
     margin-top: 50px;
-    font-size: 3.5em; /* 放大标题字体 */
+    font-size: 3.5rem; /* 放大标题字体 */
     color: #333;
     text-align: center;
-    font-family: 'Helvetica', '微软雅黑'; /* 指定字体 */
+    font-family: 'Helvetica', '微软雅黑';
 }
 
 .invitation-image img {
@@ -40,41 +40,40 @@ body {
 .invite-message p {
     margin-top: 15px;
     margin-bottom: 15px;
-    line-height: 1.8; /* 增加段落的行高 */
-    font-size: 1.5em; /* 增加段落字体大小 */
+    line-height: 1.8;
+    font-size: 1.6rem; /* 放大段落字体 */
 }
 
 .invite-message p:first-child {
-    margin-bottom: 20px;  /* 增加第一段和第二段之间的距离 */
+    margin-bottom: 20px;
 }
 
-/* 针对指定段落的字体大小调整 */
 .invite-message ol {
-    font-size: 1.4em; /* 放大列表项目的字体 */
-    margin-left: 20px; /* 确保列表的缩进正确 */
+    font-size: 1.5rem; /* 放大列表项目的字体 */
+    margin-left: 20px;
 }
 
 .invite-message ol li {
-    margin-bottom: 10px; /* 为每个列表项增加下方间距 */
+    margin-bottom: 10px;
 }
 
 .radio-group-inline {
     display: inline-flex;
     align-items: center;
-    margin-left: 10px; /* 保持与文本稍微有些距离 */
+    margin-left: 10px;
 }
 
 .radio-group-inline label {
-    margin-right: 10px; /* 为了使每个选项之间保持距离 */
+    margin-right: 10px;
 }
 
 .radio-group-inline input {
-    margin-right: 5px; /* 使得每个 radio button 和表情符号之间的距离适中 */
+    margin-right: 5px;
 }
 
 #afterparty_idea {
-    margin-top: 10px; /* 调整输入框顶部的空间 */
-    margin-bottom: 20px; /* 调整输入框底部的空间 */
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .rsvp-button-container {
@@ -88,10 +87,24 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em; /* 调整按钮字体大小 */
+    font-size: 1.5rem; /* 调整按钮字体大小 */
     cursor: pointer;
 }
 
 .rsvp-button-container button:hover {
     background-color: #4682b4;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .invite-message p, .invite-message ol {
+        font-size: 1.4rem;
+    }
+
+    .rsvp-button-container button {
+        font-size: 1.3rem;
+    }
 }
